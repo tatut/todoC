@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>todoC</title>
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <script>
+      Module={
+          setStatus: function(status) { console.log("Status: ", status); },
+          print: function(what) {
+              console.log(what);
+          },
+          onRuntimeInitialized: function() {
+              Module._init();
+          }
+      };
+    </script>
+    {{{ SCRIPT }}}
+  </body>
+</html>
