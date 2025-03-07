@@ -1,7 +1,21 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>todoC</title>
+    <style>
+      div.app {
+          max-width: 50vw;
+      }
+      button.delete {
+          float: right;
+          font-size: 0.5rem;
+      }
+      li.complete {
+          text-decoration: line-through;
+      }
+    </style>
+    
   </head>
   <body>
     <div id="app">Loading...</div>
@@ -15,6 +29,15 @@
               Module._init();
           }
       };
+      function add_todo(label) {
+          Module.ccall("add_todo", null, ["string"], [label]);
+      }
+      function delete_todo(id) {
+          Module.ccall("delete_todo", null, ["number"], [id]);
+      }
+      function toggle_todo(id) {
+          Module.ccall("toggle_todo", null, ["number"], [id]);
+      }
     </script>
     {{{ SCRIPT }}}
   </body>
