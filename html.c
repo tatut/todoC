@@ -35,6 +35,9 @@ char* get_html() {
 void class(const char *class) { attr_s("class", class); }
 void id(const char *id){ attr_s("id", id); }
 
+/* 
+  Example usage: 
+
 int main(int argc, char**argv) {
   html({
       tag("div", {
@@ -55,3 +58,4 @@ int main(int argc, char**argv) {
   printf("We got HTML:\n%s", get_html());
   return 0;
 }
+*/
